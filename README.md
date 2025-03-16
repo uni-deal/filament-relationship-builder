@@ -9,6 +9,7 @@ To install this package, you can use Composer directly from the GitHub repositor
 Run the following command in your terminal:
 
 ```bash
+composer config repositories.uni-deal vcs https://github.com/uni-deal/filament-relationship-builder
 composer require uni-deal/filament-relationship-builder:dev-main --prefer-dist
 ```
 
