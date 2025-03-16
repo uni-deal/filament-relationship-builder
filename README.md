@@ -1,4 +1,6 @@
 # Filament Relationship Builder
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/uni-deal/filament-relationship-builder.svg?style=flat-square)](https://packagist.org/packages/uni-deal/filament-relationship-builder)
+[![Total Downloads](https://img.shields.io/packagist/dt/uni-deal/filament-relationship-builder.svg?style=flat-square)](https://packagist.org/packages/uni-deal/filament-relationship-builder)
 
 A simple package to register a FilamentPHP builder via an Eloquent relationship with columns: `order`, `type`, and `data`.
 
