@@ -1,0 +1,29 @@
+{
+  "name": "uni-deal/filament-relationship-builder",
+  "description": "Registers a FilamentPHP builder via an Eloquent relationship with order, type, and data columns.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "filament",
+    "builder"
+  ],
+  "authors": [
+    {
+      "name": "COLANT Alan",
+      "email": "contact@alancolant.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "illuminate/database": "^10.0 || ^11.0 || ^12.0",
+    "filament/forms": "^v3.3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "UniDeal\\FilamentRelationshipBuilder\\": "src/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
