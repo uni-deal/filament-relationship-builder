@@ -9,8 +9,7 @@ To install this package, you can use Composer directly from the GitHub repositor
 Run the following command in your terminal:
 
 ```bash
-composer config repositories.uni-deal vcs https://github.com/uni-deal/filament-relationship-builder
-composer require uni-deal/filament-relationship-builder:dev-main --prefer-dist
+composer require uni-deal/filament-relationship-builder
 ```
 
 Once installed, you can start using the `RelationshipBuilder` component as shown in the example above.
@@ -28,3 +27,34 @@ RelationshipBuilder::make('blocks')
         ])
     ]),
 ```
+
+## Model Requirements
+
+The targeted model must contain a cast on the `data` column of type array:
+
+```php
+class Block extends \Illuminate\Database\Eloquent\Model {
+    // Before Laravel 11
+    protected $casts = [
+        'data' => 'array',
+    ];
+
+    // For Laravel 11+
+    protected function casts(): array {
+        return [
+            'data' => 'array',    
+        ];
+    }
+}
+```
+
+Register the `blocks` relation on the initial model:
+
+```php
+class Post extends \Illuminate\Database\Eloquent\Model {
+    public function blocks() {
+        return $this->hasMany(Block::class);
+    }
+}
+```
+
